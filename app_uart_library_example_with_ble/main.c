@@ -94,7 +94,7 @@
 #define SEC_PARAM_MIN_KEY_SIZE          7                                           /**< Minimum encryption key size. */
 #define SEC_PARAM_MAX_KEY_SIZE          16                                          /**< Maximum encryption key size. */
 
-#define START_STRING                    "Start...\n"                                /**< The string that will be sent over the UART when the application starts. */
+#define START_STRING                    "Start TEST...\n"                                /**< The string that will be sent over the UART when the application starts. */
 
 #define DEAD_BEEF                       0xDEADBEEF                                  /**< Value used as error code on stack dump, can be used to identify stack location on stack unwind. */
 
@@ -242,6 +242,7 @@ void nus_data_handler(ble_nus_t * p_nus, uint8_t * p_data, uint16_t length)
         app_uart_put(p_data[i]);
     }
     app_uart_put('\n');
+		
 }
 /**@snippet [Handling the data received over BLE] */
 
@@ -593,7 +594,7 @@ int main(void)
     leds_init();
     timers_init();
     buttons_init();
-    uart_init();
+    uart_init();// init FIFO, in the FIFO UART initialized, 
     ble_stack_init();
     gap_params_init();
     services_init();
@@ -602,17 +603,19 @@ int main(void)
     sec_params_init();
     
     uart_putstring((const uint8_t *)START_STRING);
-    
+   
+
     advertising_start();
     
     // Enter main loop
     for (;;)
     { 
+			//uart_putstring((const uint8_t *)START_STRING);
         /*Stop reading new data if there are no ble buffers available */
         if(ble_buffer_available)
-        {
+        {	
             if(app_uart_get(&newbyte) == NRF_SUCCESS)
-            {
+            {		//uart_putstring((const uint8_t *)START_STRING);
                 data_array[index++] =  newbyte;
                
                 if (index >= (BLE_NUS_MAX_DATA_LEN))
@@ -624,10 +627,11 @@ int main(void)
         }
         /* Re-transmission if ble_buffer_available was set to false*/
         if(tx_complete)
-        {
+        {	//	uart_putstring((const uint8_t *)START_STRING);
             tx_complete=false;
             
             ble_buffer_available=ble_attempt_to_send(&data_array[0],index);
+					
             if(ble_buffer_available) index =0;
         }
 
