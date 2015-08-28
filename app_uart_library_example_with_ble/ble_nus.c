@@ -16,7 +16,7 @@
 #include <string.h>
 
 
-extern uint8_t tflag;  //tflag for debug
+//extern uint8_t tflag;  //tflag for debug
 
 
 /**@brief     Function for handling the @ref BLE_GAP_EVT_CONNECTED event from the S110 SoftDevice.
@@ -215,7 +215,7 @@ void ble_nus_on_ble_evt(ble_nus_t * p_nus, ble_evt_t * p_ble_evt)
 
         case BLE_GATTS_EVT_WRITE:
             on_write(p_nus, p_ble_evt);
-						tflag=1;
+						
             break;
 
         default:
