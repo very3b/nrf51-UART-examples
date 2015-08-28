@@ -58,6 +58,7 @@
 #include "ble_error_log.h"
 #include "ble_debug_assert_handler.h"
 #include "app_util_platform.h"
+#include "nrf_delay.h"
 
 #define IS_SRVC_CHANGED_CHARACT_PRESENT 0                                           /**< Include or not the service_changed characteristic. if not enabled, the server's database cannot be changed for the lifetime of the device*/
 
@@ -585,7 +586,8 @@ bool ble_attempt_to_send(uint8_t * data, uint8_t length)
  */
 int main(void)
 {
-    
+    static  uint8_t test_array[20]="This is 20";
+		static  uint8_t ind=20;
     static uint8_t data_array[BLE_NUS_MAX_DATA_LEN];
     static uint8_t index = 0;
     uint8_t newbyte;
@@ -610,32 +612,42 @@ int main(void)
     // Enter main loop
     for (;;)
     { 
+			
+			
+			
+			while(1)
+			{	uart_putstring((const uint8_t *)START_STRING);
+				nrf_delay_ms(500);
+				ble_attempt_to_send(&test_array[0],ind);
+				
+			}
+			
 			//uart_putstring((const uint8_t *)START_STRING);
-        /*Stop reading new data if there are no ble buffers available */
-        if(ble_buffer_available)
-        {	
-            if(app_uart_get(&newbyte) == NRF_SUCCESS)
-            {		//uart_putstring((const uint8_t *)START_STRING);
-                data_array[index++] =  newbyte;
-               
-                if (index >= (BLE_NUS_MAX_DATA_LEN))
-				{
-                    ble_buffer_available=ble_attempt_to_send(&data_array[0],index);
-                 	if(ble_buffer_available) index=0;
-				}
-            }
-        }
-        /* Re-transmission if ble_buffer_available was set to false*/
-        if(tx_complete)
-        {	//	uart_putstring((const uint8_t *)START_STRING);
-            tx_complete=false;
-            
-            ble_buffer_available=ble_attempt_to_send(&data_array[0],index);
-					
-            if(ble_buffer_available) index =0;
-        }
+//        /*Stop reading new data if there are no ble buffers available */
+//        if(ble_buffer_available)
+//        {	
+//            if(app_uart_get(&newbyte) == NRF_SUCCESS)
+//            {		//uart_putstring((const uint8_t *)START_STRING);
+//                data_array[index++] =  newbyte;
+//               
+//                if (index >= (BLE_NUS_MAX_DATA_LEN))
+//				{
+//                    ble_buffer_available=ble_attempt_to_send(&data_array[0],index);
+//                 	if(ble_buffer_available) index=0;
+//				}
+//            }
+//        }
+//        /* Re-transmission if ble_buffer_available was set to false*/
+//        if(tx_complete)
+//        {	//	uart_putstring((const uint8_t *)START_STRING);
+//            tx_complete=false;
+//            
+//            ble_buffer_available=ble_attempt_to_send(&data_array[0],index);
+//					
+//            if(ble_buffer_available) index =0;
+//        }
 
-        power_manage();
+       // power_manage();
     }
 }
 

@@ -12,5 +12,5 @@
 .\_build\simple_uart.o: ..\..\..\..\..\..\Include\compiler_abstraction.h
 .\_build\simple_uart.o: ..\..\..\..\..\..\Include\simple_uart.h
 .\_build\simple_uart.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\_build\simple_uart.o: ..\..\..\..\..\..\Include\nrf_delay.h
+.\_build\simple_uart.o: ..\nrf_delay.h
 .\_build\simple_uart.o: ..\..\..\..\..\..\Include\nrf_gpio.h

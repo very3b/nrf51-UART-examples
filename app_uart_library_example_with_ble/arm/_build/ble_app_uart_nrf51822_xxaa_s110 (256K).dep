@@ -14,7 +14,7 @@ I (..\..\..\..\..\..\Include\nrf51_deprecated.h)(0x53B265E8)
 I (..\..\..\..\..\..\Include\compiler_abstraction.h)(0x53B265E8)
 F (RTE\Device\nRF51822_xxAB\arm_startup_nrf51.s)(0x53B0B8EE)()
 F (RTE\Device\nRF51822_xxAB\system_nrf51.c)(0x53B0B8EE)()
-F (.\..\main.c)(0x55DE5DC8)(--c99 -c --cpu Cortex-M0 -D__EVAL --li -g -O0 --apcs=interwork -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s110 -I..\..\..\..\..\..\Include\sd_common-I "K:\Box Sync\LEES\paper\bio_proposal\Virgo\CODE\nRF51\Nordic\nrf51822\Board\nrf6310\s110\nrf51-UART-examples\app_uart_library_example_with_ble\arm\RTE"-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D_RTE_ -DNRF51 -DBOARD_PCA10001 -DNRF51 -DDEBUG_NRF_USER -DBLE_STACK_SUPPORT_REQD-o .\_build\main.o --omf_browse .\_build\main.crf --depend .\_build\main.d)
+F (.\..\main.c)(0x55E00BAF)(--c99 -c --cpu Cortex-M0 -D__EVAL --li -g -O0 --apcs=interwork -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s110 -I..\..\..\..\..\..\Include\sd_common-I "K:\Box Sync\LEES\paper\bio_proposal\Virgo\CODE\nRF51\Nordic\nrf51822\Board\nrf6310\s110\nrf51-UART-examples\app_uart_library_example_with_ble\arm\RTE"-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D_RTE_ -DNRF51 -DBOARD_PCA10001 -DNRF51 -DDEBUG_NRF_USER -DBLE_STACK_SUPPORT_REQD-o .\_build\main.o --omf_browse .\_build\main.crf --depend .\_build\main.d)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54199D7A)
 I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x54199D7C)
 I (..\..\..\..\..\..\Include\nordic_common.h)(0x53B263DE)
@@ -67,6 +67,7 @@ I (..\..\..\..\..\..\Include\boards/pca10001.h)(0x53B263DE)
 I (..\..\..\..\..\..\Include\ble\ble_error_log.h)(0x53B263E0)
 I (..\..\..\..\..\..\Include\ble\ble_flash.h)(0x53B263E0)
 I (..\..\..\..\..\..\Include\ble\ble_debug_assert_handler.h)(0x53B263E0)
+I (..\nrf_delay.h)(0x55E00B08)
 F (..\..\..\..\..\..\Source\ble\ble_services\ble_srv_common.c)(0x53B263D4)(--c99 -c --cpu Cortex-M0 -D__EVAL --li -g -O0 --apcs=interwork -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s110 -I..\..\..\..\..\..\Include\sd_common-I "K:\Box Sync\LEES\paper\bio_proposal\Virgo\CODE\nRF51\Nordic\nrf51822\Board\nrf6310\s110\nrf51-UART-examples\app_uart_library_example_with_ble\arm\RTE"-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D_RTE_ -DNRF51 -DBOARD_PCA10001 -DNRF51 -DDEBUG_NRF_USER -DBLE_STACK_SUPPORT_REQD-o .\_build\ble_srv_common.o --omf_browse .\_build\ble_srv_common.crf --depend .\_build\ble_srv_common.d)
 I (..\..\..\..\..\..\Include\ble\ble_services\ble_srv_common.h)(0x53B263E0)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54199D7A)
@@ -194,7 +195,7 @@ I (..\..\..\..\..\..\Include\nrf51_deprecated.h)(0x53B265E8)
 I (..\..\..\..\..\..\Include\compiler_abstraction.h)(0x53B265E8)
 I (..\..\..\..\..\..\Include\simple_uart.h)(0x53B263DE)
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54199D7C)
-I (..\..\..\..\..\..\Include\nrf_delay.h)(0x53B263DE)
+I (..\nrf_delay.h)(0x55E00B08)
 I (..\..\..\..\..\..\Include\nrf_gpio.h)(0x53B263DE)
 F (..\..\..\..\..\..\Source\app_common\app_timer.c)(0x53B263DC)(--c99 -c --cpu Cortex-M0 -D__EVAL --li -g -O0 --apcs=interwork -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s110 -I..\..\..\..\..\..\Include\sd_common-I "K:\Box Sync\LEES\paper\bio_proposal\Virgo\CODE\nRF51\Nordic\nrf51822\Board\nrf6310\s110\nrf51-UART-examples\app_uart_library_example_with_ble\arm\RTE"-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D_RTE_ -DNRF51 -DBOARD_PCA10001 -DNRF51 -DDEBUG_NRF_USER -DBLE_STACK_SUPPORT_REQD-o .\_build\app_timer.o --omf_browse .\_build\app_timer.crf --depend .\_build\app_timer.d)
 I (..\..\..\..\..\..\Include\app_common\app_timer.h)(0x53B263DE)
@@ -216,7 +217,7 @@ I (..\..\..\..\..\..\Include\nrf51_bitfields.h)(0x53B265E8)
 I (..\..\..\..\..\..\Include\s110\nrf_soc.h)(0x53A0F546)
 I (..\..\..\..\..\..\Include\s110\nrf_svc.h)(0x53A0F546)
 I (..\..\..\..\..\..\Include\s110\nrf_error_soc.h)(0x5363F06C)
-I (..\..\..\..\..\..\Include\nrf_delay.h)(0x53B263DE)
+I (..\nrf_delay.h)(0x55E00B08)
 I (..\..\..\..\..\..\Include\nrf.h)(0x53B265E8)
 I (..\..\..\..\..\..\Include\nrf51_deprecated.h)(0x53B265E8)
 I (..\..\..\..\..\..\Include\sd_common\app_util_platform.h)(0x53B263DE)
@@ -282,3 +283,16 @@ I (..\..\..\..\..\..\Include\nrf51_deprecated.h)(0x53B265E8)
 I (..\..\..\..\..\..\Include\nrf_gpio.h)(0x53B263DE)
 I (..\..\..\..\..\..\Include\app_common\app_util.h)(0x53B263DE)
 I (..\..\..\..\..\..\Include\app_common\app_gpiote.h)(0x53B263DE)
+F (..\..\..\..\..\..\Source\nrf_delay\nrf_delay.c)(0x53B263D6)(--c99 -c --cpu Cortex-M0 -D__EVAL --li -g -O0 --apcs=interwork -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s110 -I..\..\..\..\..\..\Include\sd_common-I "K:\Box Sync\LEES\paper\bio_proposal\Virgo\CODE\nRF51\Nordic\nrf51822\Board\nrf6310\s110\nrf51-UART-examples\app_uart_library_example_with_ble\arm\RTE"-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D_RTE_ -DNRF51 -DBOARD_PCA10001 -DNRF51 -DDEBUG_NRF_USER -DBLE_STACK_SUPPORT_REQD-o .\_build\nrf_delay.o --omf_browse .\_build\nrf_delay.crf --depend .\_build\nrf_delay.d)
+I (d:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x54199D7C)
+I (..\..\..\..\..\..\Include\compiler_abstraction.h)(0x53B265E8)
+I (..\..\..\..\..\..\Include\nrf.h)(0x53B265E8)
+I (..\..\..\..\..\..\Include\nrf51.h)(0x53B265E8)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC31DA)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54199D7A)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
+I (..\..\..\..\..\..\Include\system_nrf51.h)(0x53B265E8)
+I (..\..\..\..\..\..\Include\nrf51_bitfields.h)(0x53B265E8)
+I (..\..\..\..\..\..\Include\nrf51_deprecated.h)(0x53B265E8)
+I (..\nrf_delay.h)(0x55E00B08)

@@ -12313,7 +12313,7 @@ uint32_t __svc(SD_FLASH_PROTECT) sd_flash_protect(uint32_t protenset0, uint32_t 
  
 #line 18 "..\\..\\..\\..\\..\\..\\Source\\app_common\\app_timer.c"
 #line 19 "..\\..\\..\\..\\..\\..\\Source\\app_common\\app_timer.c"
-#line 1 "..\\..\\..\\..\\..\\..\\Include\\nrf_delay.h"
+#line 1 "..\\nrf_delay.h"
 
 
 
@@ -12511,7 +12511,7 @@ uint32_t __svc(SD_FLASH_PROTECT) sd_flash_protect(uint32_t protenset0, uint32_t 
 
 
 
-#line 5 "..\\..\\..\\..\\..\\..\\Include\\nrf_delay.h"
+#line 5 "..\\nrf_delay.h"
 
  
 
@@ -12534,7 +12534,7 @@ loop
         BNE    loop
         BX     LR
 }
-#line 71 "..\\..\\..\\..\\..\\..\\Include\\nrf_delay.h"
+#line 71 "..\\nrf_delay.h"
 
 void nrf_delay_ms(uint32_t volatile number_of_ms);
 

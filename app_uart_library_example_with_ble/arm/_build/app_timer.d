@@ -19,7 +19,7 @@
 .\_build\app_timer.o: ..\..\..\..\..\..\Include\s110\nrf_soc.h
 .\_build\app_timer.o: ..\..\..\..\..\..\Include\s110\nrf_svc.h
 .\_build\app_timer.o: ..\..\..\..\..\..\Include\s110\nrf_error_soc.h
-.\_build\app_timer.o: ..\..\..\..\..\..\Include\nrf_delay.h
+.\_build\app_timer.o: ..\nrf_delay.h
 .\_build\app_timer.o: ..\..\..\..\..\..\Include\nrf.h
 .\_build\app_timer.o: ..\..\..\..\..\..\Include\nrf51_deprecated.h
 .\_build\app_timer.o: ..\..\..\..\..\..\Include\sd_common\app_util_platform.h

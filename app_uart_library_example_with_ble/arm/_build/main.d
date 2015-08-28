@@ -52,3 +52,4 @@
 .\_build\main.o: ..\..\..\..\..\..\Include\ble\ble_error_log.h
 .\_build\main.o: ..\..\..\..\..\..\Include\ble\ble_flash.h
 .\_build\main.o: ..\..\..\..\..\..\Include\ble\ble_debug_assert_handler.h
+.\_build\main.o: ..\nrf_delay.h

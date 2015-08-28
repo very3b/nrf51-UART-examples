@@ -9211,11 +9211,11 @@ void simple_uart_config(uint8_t rts_pin_number, uint8_t txd_pin_number, uint8_t 
 
  
 #line 17 "..\\..\\..\\..\\..\\..\\Source\\simple_uart\\simple_uart.c"
-#line 1 "..\\..\\..\\..\\..\\..\\Include\\nrf_delay.h"
+#line 1 "..\\nrf_delay.h"
 
 
 
-#line 5 "..\\..\\..\\..\\..\\..\\Include\\nrf_delay.h"
+#line 5 "..\\nrf_delay.h"
 
  
 
@@ -9238,7 +9238,7 @@ loop
         BNE    loop
         BX     LR
 }
-#line 71 "..\\..\\..\\..\\..\\..\\Include\\nrf_delay.h"
+#line 71 "..\\nrf_delay.h"
 
 void nrf_delay_ms(uint32_t volatile number_of_ms);
 
