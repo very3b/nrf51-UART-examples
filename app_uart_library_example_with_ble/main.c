@@ -60,6 +60,10 @@
 #include "app_util_platform.h"
 #include "nrf_delay.h"
 
+
+ uint8_t tflag=0;  //tflag for debug
+
+
 #define IS_SRVC_CHANGED_CHARACT_PRESENT 0                                           /**< Include or not the service_changed characteristic. if not enabled, the server's database cannot be changed for the lifetime of the device*/
 
 
@@ -107,6 +111,9 @@ static ble_nus_t                        m_nus;                                  
 
 static bool ble_buffer_available = true;
 static bool tx_complete = false;
+
+
+
 
 /**@brief     Error handler function, which is called when an error has occurred.
  *
@@ -613,14 +620,20 @@ int main(void)
     for (;;)
     { 
 			
+		
+			//	uart_putstring((const uint8_t *)START_STRING);
+//				nrf_delay_ms(1500);
+//		//		ble_attempt_to_send(&test_array[0],ind);
+//				//send dug information once, then from BLE_evnt -to on_wirte call uart write again.
+//			  if(tflag==1)
+//				{
+//				uart_putstring("on wirte is correct \n");
+//					
+//					tflag=0;
+//				}
+//				
 			
-			
-			while(1)
-			{	uart_putstring((const uint8_t *)START_STRING);
-				nrf_delay_ms(500);
-				ble_attempt_to_send(&test_array[0],ind);
-				
-			}
+				 power_manage();
 			
 			//uart_putstring((const uint8_t *)START_STRING);
 //        /*Stop reading new data if there are no ble buffers available */
@@ -647,8 +660,8 @@ int main(void)
 //            if(ble_buffer_available) index =0;
 //        }
 
-       // power_manage();
-    }
+      
+    };
 }
 
 /** 

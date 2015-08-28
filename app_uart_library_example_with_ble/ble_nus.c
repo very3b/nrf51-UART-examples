@@ -15,6 +15,10 @@
 #include "ble_srv_common.h"
 #include <string.h>
 
+
+extern uint8_t tflag;  //tflag for debug
+
+
 /**@brief     Function for handling the @ref BLE_GAP_EVT_CONNECTED event from the S110 SoftDevice.
  *
  * @param[in] p_nus     Nordic UART Service structure.
@@ -51,7 +55,7 @@ static void on_write(ble_nus_t * p_nus, ble_evt_t * p_ble_evt)
     if (
         (p_evt_write->handle == p_nus->rx_handles.cccd_handle)
         &&
-        (p_evt_write->len == 2)
+        (p_evt_write->len == 2)  // if the the write is from Nordic uart service
        )
     {
         if (ble_srv_is_notification_enabled(p_evt_write->data))
@@ -211,6 +215,7 @@ void ble_nus_on_ble_evt(ble_nus_t * p_nus, ble_evt_t * p_ble_evt)
 
         case BLE_GATTS_EVT_WRITE:
             on_write(p_nus, p_ble_evt);
+						tflag=1;
             break;
 
         default:

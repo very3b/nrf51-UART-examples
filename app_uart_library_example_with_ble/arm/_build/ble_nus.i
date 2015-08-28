@@ -4188,6 +4188,10 @@ extern __declspec(__nothrow) void _membitmovewb(void *  , const void *  , int  ,
 #line 17 "..\\ble_nus.c"
 
 
+extern uint8_t tflag;  
+
+
+
 
 
 
@@ -4223,7 +4227,7 @@ static void on_write(ble_nus_t * p_nus, ble_evt_t * p_ble_evt)
     if (
         (p_evt_write->handle == p_nus->rx_handles.cccd_handle)
         &&
-        (p_evt_write->len == 2)
+        (p_evt_write->len == 2)  
        )
     {
         if (ble_srv_is_notification_enabled(p_evt_write->data))
@@ -4383,6 +4387,7 @@ void ble_nus_on_ble_evt(ble_nus_t * p_nus, ble_evt_t * p_ble_evt)
 
         case BLE_GATTS_EVT_WRITE:
             on_write(p_nus, p_ble_evt);
+						tflag=1;
             break;
 
         default:
